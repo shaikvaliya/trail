@@ -122,14 +122,14 @@ const StudentManager = () => {
   return (
     <div className="student-container">
 
-{message && (
-  <div className={`message-banner ${message.toLowerCase().includes('error') ? 'error' : 'success'}`}>
-    {message}
-  </div>
-)}
+      {message && (
+        <div className={`message-banner ${message.toLowerCase().includes('error') ? 'error' : 'success'}`}>
+          {message}
+        </div>
+      )}
 
 
-      <h2>Student Management</h2>
+      <h2>Student Management - Happy Independence </h2>
 
       <div>
         <h3>{editMode ? 'Edit Student' : 'Add Student'}</h3>
