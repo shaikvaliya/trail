@@ -18,13 +18,11 @@ public class StudentController {
 
     @Autowired
     private StudentService studentService;
-    
+
     @GetMapping("/")
-    public String home() 
-    {
+    public String home() {
         return "Jenkins Full Stack Deployment Demo";
     }
-    
 
     @PostMapping("/add")
     public ResponseEntity<Student> addStudent(@RequestBody Student student) {
@@ -55,7 +53,8 @@ public class StudentController {
             Student updatedStudent = studentService.updateStudent(student);
             return new ResponseEntity<>(updatedStudent, HttpStatus.OK);
         } else {
-            return new ResponseEntity<>("Cannot update. Student with ID " + student.getId() + " not found.", HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("Cannot update. Student with ID " + student.getId() + " not found.",
+                    HttpStatus.NOT_FOUND);
         }
     }
 
